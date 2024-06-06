@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MixMatch: Music Stats Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('../img/bg.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: #E5E7EB; /* Light grey color for text */
+        }
+        .bg-opacity-80 {
+            background-color: rgba(30, 41, 59, 0.897); /* Dark blue with opacity */
+        }
+        .bg-opacity-90 {
+            background-color: rgba(30, 41, 59, 0.9); /* Dark blue with more opacity */
+        }
+        .creator-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .highlight {
+            color: #6366F1; /* Indigo accent color */
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Header -->
+    <header class="bg-opacity-90 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold highlight">MixMatch</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#profile" class="hover:underline">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4">
+        <!-- Playlist Comparison Section -->
+        <section id="compare" class="my-8 bg-opacity-80 p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold mb-4 highlight">Compare Playlists</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label for="platform1" class="block text-sm font-medium">Choose Platform for Playlist 1</label>
+                    <select id="platform1" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-600 bg-gray-800 text-white focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                        <option>Last.fm</option>
+                        <option>YouTube</option>
+                        <option>Spotify</option>
+                    </select>
+                    <label for="playlist1" class="block text-sm font-medium mt-4">Playlist 1</label>
+                    <input type="text" id="playlist1" class="mt-1 block w-full shadow-sm sm:text-sm border-gray-600 bg-gray-800 text-white rounded-md" placeholder="Enter URL or ID">
+                </div>
+                <div>
+                    <label for="platform2" class="block text-sm font-medium">Choose Platform for Playlist 2</label>
+                    <select id="platform2" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-600 bg-gray-800 text-white focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                        <option>Last.fm</option>
+                        <option>YouTube</option>
+                        <option>Spotify</option>
+                    </select>
+                    <label for="playlist2" class="block text-sm font-medium mt-4">Playlist 2</label>
+                    <input type="text" id="playlist2" class="mt-1 block w-full shadow-sm sm:text-sm border-gray-600 bg-gray-800 text-white rounded-md" placeholder="Enter URL or ID">
+                </div>
+            </div>
+            <div class="mt-6 text-center">
+                <button class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700">Compare</button>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer class="bg-opacity-90 text-white p-8 text-center">
+        <div class="container mx-auto">
+            <p>&copy; 2024 MixMatch. All rights reserved.</p>
+            <div class="mt-8">
+                <h3 class="text-xl font-semibold mb-4">Created by:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
+                    <div class="text-center">
+                        <img src="../img/obidur.jpg" alt="Obidur Rahman" class="creator-image mx-auto">
+                        <p class="mt-4 text-lg font-bold">Obidur Rahman</p>
+                        <p class="mt-2 text-sm">The code wizard who thinks a day without coding is a day wasted.(in a complicated relationship)</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="../img/redwan.jpg" alt="Redwan Hossain" class="creator-image mx-auto">
+                        <p class="mt-4 text-lg font-bold">Redwan Hossain</p>
+                        <p class="mt-2 text-sm">The design guru who believes that colors and code should always be in harmony.(currently single)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
